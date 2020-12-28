@@ -1,7 +1,8 @@
+import os
 from flask import Flask
 from flask_cors import CORS
 
-app = Flask(__name__, static_folder='./react-app/build', static_url_path='/')
+app = Flask(__name__, static_folder='./build', static_url_path='/')
 
 CORS(app)
 
@@ -24,4 +25,5 @@ def linguists():
     return {'linguists': linguists}
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    #app.run(debug=False)
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
