@@ -4,10 +4,9 @@ import './App.css';
 function App() {
   const [linguists, setLinguists] = useState([]);
   useEffect(() => {
-    fetch("/api/linguists").then(
+    fetch("https://linguisticsapi.herokuapp.com/api/linguists").then(
       res => res.json()).then(data => {
       setLinguists(data.linguists);
-      console.log(data.linguists);
     });
   }, []);
   
