@@ -12,7 +12,9 @@ function App() {
   
   return (
     <div className="App">
-      <p>Hello {linguists[0].name}</p>
+      {linguists.length > 0 && 
+        <p>Hello {linguists[0].name}</p>
+      }
     </div>
   );
 }
