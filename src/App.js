@@ -1,21 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import LinguistsJson from './components/LinguistsJson';
 import './App.css';
 
 function App() {
-  const [linguists, setLinguists] = useState([]);
-  useEffect(() => {
-    fetch("https://linguisticsapi.herokuapp.com/api/linguists").then(
-      res => res.json()).then(data => {
-      setLinguists(data.linguists);
-    });
-  }, []);
   
   return (
     <div className="App">
-      <p>123</p>
-      {linguists.length > 0 && 
-        <p>Hello {linguists[0].name}</p>
-      }
+      <h1>Linguistics API</h1>
+      <LinguistsJson />
+      
     </div>
   );
 }
