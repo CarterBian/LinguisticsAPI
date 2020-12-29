@@ -1,3 +1,8 @@
 .json{
     text-align: left;
+    overflow: auto;
+}
+
+#top{
+    padding-top: 2%;
 }
