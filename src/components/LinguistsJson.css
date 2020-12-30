@@ -6,3 +6,11 @@
 #top{
     padding-top: 2%;
 }
+
+.segment{
+    overflow:hidden;
+}
+
+#link{
+    padding-top: 7px;
+}
