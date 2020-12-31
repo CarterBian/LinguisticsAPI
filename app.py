@@ -24,6 +24,18 @@ def linguists():
 
     return {'linguists': linguists}
 
+@app.route('/api/IOLmedals', methods=['GET'])
+def IOLmedals():
+    countries = [
+        {'country': 'United States', 'Gold': 19, 'Silver': 35, 'Bronze': 20},
+        {'country': 'Bulgaria', 'Gold': 19, 'Silver': 20, 'Bronze': 29},
+        {'country': 'Russia', 'Gold': 16, 'Silver': 26, 'Bronze': 39},
+        {'country': 'United Kingdom', 'Gold': 13, 'Silver': 8, 'Bronze': 13},
+        {'country': 'Poland', 'Gold': 9, 'Silver': 22, 'Bronze': 17}
+    ]
+
+    return {'countries': countries}
+
 if __name__ == "__main__":
     #app.run(debug=False)
     app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
