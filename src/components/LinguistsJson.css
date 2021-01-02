@@ -1,10 +1,16 @@
 .json{
     text-align: left;
-    overflow: auto;
 }
 
 #top{
     padding-top: 2%;
+    
+}
+
+#bottom{
+    font-size: 13px;
+    height: 500px;
+    overflow: auto;
 }
 
 .segment{

@@ -15,21 +15,21 @@ function LinguistsJson() {
     return (
         <div id="top" className="ui raised very padded text container segment">
             <h2 className="ui header">Famous Linguists</h2>
-            <div class="ui segment">
+            <div className="ui segment">
                 <CopyToClipboard text="https://linguisticsapi.herokuapp.com/api/linguists">
-                    <div class="ui animated fade green button left floated" tabindex="0">
-                        <div class="visible content">GET</div>
-                        <div class="hidden content">Copy</div>
+                    <div className="ui animated fade green button left floated" tabindex="0">
+                        <div className="visible content">GET</div>
+                        <div className="hidden content">Copy</div>
                     </div>
                 </CopyToClipboard>
-                <h3 id="link" class="ui floated header">https://linguisticsapi.herokuapp.com/api/linguists</h3>
+                <h3 id="link" className="ui floated header">https://linguisticsapi.herokuapp.com/api/linguists</h3>
             </div>
 
-            <div className="ui bottom attached json">
+            <div id="bottom" className="ui attached json">
                 {linguists.length > 0 ? (
                     <ReactJson src={linguists} />
                 ) : (
-                        <div id="rel" class="ui active loader"></div>
+                        <div id="rel" className="ui active loader"></div>
                     )}
             </div>
         </div>

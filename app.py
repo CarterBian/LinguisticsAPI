@@ -18,8 +18,10 @@ def add_linguists():
 @app.route('/api/linguists', methods=['GET'])
 def linguists():
     linguists = [
-        {'name': 'Noam Chomsky', 'college': 'University of Pennsylvania'},
-        {'name': 'Roman Jakobson', 'college': 'Moscow State University'}
+        {'name': 'Noam Chomsky', 'idea': 'Universal Grammar', 'college': 'University of Pennsylvania'},
+        {'name': 'Roman Jakobson', 'idea': 'Distinctive Features', 'college': 'Moscow State University'},
+        {'name': 'Robin Lakoff','idea': 'Politeness Principle', 'college': 'Radcliffe College'},
+        {'name': 'Eve Clark','idea': 'First Language Acquisition', 'college': 'The University of Edinburgh'}
     ]
 
     return {'linguists': linguists}
