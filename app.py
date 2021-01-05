@@ -1,10 +1,12 @@
 import os
 from flask import Flask
 from flask_cors import CORS
+from flask_caching import Cache
 
 app = Flask(__name__, static_folder='build', static_url_path='')
 
 CORS(app)
+cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 @app.route('/')
 def index():
@@ -15,6 +17,7 @@ def add_linguists():
 
     return 'Done', 201
 
+@cache.cached(timeout=50)
 @app.route('/api/linguists', methods=['GET'])
 def linguists():
     linguists = [
@@ -26,6 +29,7 @@ def linguists():
 
     return {'linguists': linguists}
 
+@cache.cached(timeout=50)
 @app.route('/api/IOLmedals', methods=['GET'])
 def IOLmedals():
     countries = [
