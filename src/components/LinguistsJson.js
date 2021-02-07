@@ -22,7 +22,7 @@ function LinguistsJson() {
     return (
         <div id="top" className="ui raised very padded text container segment">
             <h2 id="h2" className="ui header">Famous Linguists</h2>
-            <div className="ui segment">
+            <div id="bar" className="ui segment">
                 <CopyToClipboard text="https://linguisticsapi.herokuapp.com/api/linguists">
                     <div className="ui animated fade green button left floated" tabindex="0">
                         <div className="visible content">GET</div>

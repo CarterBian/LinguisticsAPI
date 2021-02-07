@@ -5,11 +5,17 @@
 #top{
     padding-top: 2%;
     padding-bottom: 2%;
-    background: #557655;
+    background: #476E81;
+}
+
+#bar{
+    background: rgb(39, 40, 34);
+    color: white;
 }
 
 #h2{
     color: white;
+    font-family: "courier","sans-serif";
 }
 
 #bottom{
@@ -24,4 +30,7 @@
 
 #link{
     padding-top: 7px;
+    color: white;
+    font-family: "courier","sans-serif";
+    font-size: 1.1rem;
 }
