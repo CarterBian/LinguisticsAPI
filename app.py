@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask_cors import CORS
 from flask_caching import Cache
+import linguistics
 
 app = Flask(__name__, static_folder='build', static_url_path='')
 
@@ -20,6 +21,8 @@ def add_linguists():
 @cache.cached(timeout=50)
 @app.route('/api/linguists', methods=['GET'])
 def linguists():
+    return linguists.linguists()
+    """
     linguists = [
         {'name': 'Noam Chomsky', 'idea': 'Universal Grammar', 'college': 'University of Pennsylvania'},
         {'name': 'Roman Jakobson', 'idea': 'Distinctive Features', 'college': 'Moscow State University'},
@@ -28,6 +31,7 @@ def linguists():
     ]
 
     return {'linguists': linguists}
+    """
 
 @cache.cached(timeout=50)
 @app.route('/api/IOLmedals', methods=['GET'])
