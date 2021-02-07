@@ -21,7 +21,7 @@ function LinguistsJson() {
 
     return (
         <div id="top" className="ui raised very padded text container segment">
-            <h2 className="ui header">Famous Linguists</h2>
+            <h2 id="h2" className="ui header">Famous Linguists</h2>
             <div className="ui segment">
                 <CopyToClipboard text="https://linguisticsapi.herokuapp.com/api/linguists">
                     <div className="ui animated fade green button left floated" tabindex="0">
@@ -34,7 +34,7 @@ function LinguistsJson() {
 
             <div id="bottom" className="ui attached json">
                 {linguists.length > 0 ? (
-                    <ReactJson src={linguists} />
+                    <ReactJson src={linguists} theme="monokai"/>
                 ) : (
                         <div id="rel" className="ui active loader"></div>
                     )}

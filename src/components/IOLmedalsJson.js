@@ -20,7 +20,7 @@ function IOLmedalsJson() {
 
     return (
         <div id="top" className="ui raised very padded text container segment">
-            <h2 className="ui header">International Linguistics Olympiad Medals by Country</h2>
+            <h2 id="h2" className="ui header">International Linguistics Olympiad Medals by Country</h2>
             <div className="ui segment">
                 <CopyToClipboard text="https://linguisticsapi.herokuapp.com/api/IOLmedals">
                     <div className="ui animated fade green button left floated" tabindex="0">
@@ -33,7 +33,7 @@ function IOLmedalsJson() {
 
             <div id="bottom" className="ui attached json">
                 {countries.length > 0 ? (
-                    <ReactJson src={countries} />
+                    <ReactJson src={countries} theme="monokai"/>
                 ) : (
                         <div id="rel" className="ui active loader"></div>
                     )}

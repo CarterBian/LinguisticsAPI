@@ -4,10 +4,12 @@
 
 #top{
     padding-top: 2%;
+    padding-bottom: 2%;
+    background: #557655;
 }
 
-.h2{
-    color: #ddb692;
+#h2{
+    color: white;
 }
 
 #bottom{
