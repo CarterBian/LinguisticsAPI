@@ -11,5 +11,6 @@ def linguists():
         if count == 3:
             continue
         name = s.find('a').text
-        linguist.append({'name': name})
+        nationality = s.find_all('div', {"class":'desc-q'})[1].text[s.find_all('div', {"class":'desc-q'})[1].text.find(':') + 2:]
+        linguist.append({'name': name, 'nationality': nationality})
     return {'linguists': linguist}
