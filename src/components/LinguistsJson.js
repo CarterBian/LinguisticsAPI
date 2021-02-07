@@ -11,6 +11,13 @@ function LinguistsJson() {
                 setLinguists(data.linguists);
             });
     }, []);
+    // useEffect(() => {
+    //     fetch("http://127.0.0.1:5000/api/linguists").then(
+    //         res => res.json()).then(data => {
+    //             setLinguists(data.linguists);
+    //         });
+    // }, []);
+    
 
     return (
         <div id="top" className="ui raised very padded text container segment">
