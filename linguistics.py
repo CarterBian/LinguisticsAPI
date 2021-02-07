@@ -10,8 +10,6 @@ def linguists():
     for count, s in enumerate(text):
         if count == 3:
             continue
-        if count >= 10:
-            break
         data = {}
         name = s.find('a').text
         data['name'] = name
