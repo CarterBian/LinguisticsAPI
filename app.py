@@ -21,8 +21,7 @@ def add_linguists():
 @cache.cached(timeout=50)
 @app.route('/api/linguists', methods=['GET'])
 def linguists():
-    return linguistics.linguists()
-    """
+    #return linguistics.linguists()
     linguists = [
         {'name': 'Noam Chomsky', 'idea': 'Universal Grammar', 'college': 'University of Pennsylvania'},
         {'name': 'Roman Jakobson', 'idea': 'Distinctive Features', 'college': 'Moscow State University'},
@@ -31,7 +30,7 @@ def linguists():
     ]
 
     return {'linguists': linguists}
-    """
+    
 
 @cache.cached(timeout=50)
 @app.route('/api/IOLmedals', methods=['GET'])
