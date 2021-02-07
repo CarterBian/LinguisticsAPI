@@ -12,7 +12,7 @@ def linguists():
             continue
         data = {}
         name = s.find('a').text
-        data['name'] = name
+        data['Name'] = name
         print(name)
         for i in range(len(s.find_all('div', {"class":'desc-q'}))):
             info = s.find_all('div', {"class":'desc-q'})[i].text
