@@ -22,7 +22,7 @@ const BackgroundContainer = styled.div`
 
 const TextContainer = styled.div`
    font-family : "courier","sans-serif";
-   font-size : 30px;
+   font-size : 35px;
    text-align: center;
    align-self:center;
    color: white;
