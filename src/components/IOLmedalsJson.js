@@ -11,12 +11,6 @@ function IOLmedalsJson() {
                 setCountries(data.countries);
             });
     }, []);
-    // useEffect(() => {
-    //     fetch("http://127.0.0.1:5000/api/IOLmedals").then(
-    //         res => res.json()).then(data => {
-    //             setCountries(data.countries);
-    //         });
-    // }, []);
 
     return (
         <div id="top" className="ui raised very padded text container segment">
